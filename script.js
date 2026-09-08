@@ -229,6 +229,14 @@ const wishText = document.getElementById("wishText");
 const wishModule = document.querySelector(".wish-module");
 let wishIndex = -1;
 
+const giftModel = document.getElementById("giftModel");
+const giftOpenBtn = document.getElementById("giftOpenBtn");
+giftOpenBtn.addEventListener("click", () => {
+  const isOpen = giftModel.classList.toggle("open");
+  giftOpenBtn.innerHTML = isOpen ? "Gift opened <span>♥</span>" : "Open your special gift <span>✦</span>";
+  if (isOpen) burstHearts(18);
+});
+
 document.getElementById("wishBtn").addEventListener("click", () => {
   let nextIndex;
   do nextIndex = Math.floor(Math.random() * wishes.length);

@@ -431,6 +431,28 @@ em{
 .gift-heading{text-align:center;margin-bottom:35px}
 .gift-heading h2{font-size:clamp(3rem,6vw,5.5rem);line-height:.9;font-weight:500}
 .gift-heading>p:last-child{color:var(--muted);margin-top:16px;font-size:.9rem}
+.gift-showcase{text-align:center;margin:-4px auto 28px}
+.gift-model{position:relative;width:190px;height:150px;margin:0 auto 13px;perspective:700px}
+.gift-aura{position:absolute;width:170px;height:90px;left:10px;bottom:4px;border-radius:50%;background:rgba(255,126,182,.24);filter:blur(24px);animation:giftAura 2.8s ease-in-out infinite alternate}
+@keyframes giftAura{to{transform:scale(1.2);opacity:.65}}
+.gift-box{position:absolute;left:25px;bottom:18px;width:140px;height:92px;border:1px solid rgba(255,215,138,.58);border-radius:5px 5px 12px 12px;background:linear-gradient(135deg,#b8326b,#6f245c 52%,#3b1d48);box-shadow:inset 15px 0 25px rgba(255,255,255,.1),0 20px 35px rgba(0,0,0,.45);transform:rotateX(3deg)}
+.gift-box::after{content:"";position:absolute;inset:7px;border:1px solid rgba(255,255,255,.16);border-radius:3px 3px 9px 9px}
+.gift-lid{position:absolute;z-index:2;left:18px;bottom:101px;width:154px;height:28px;border:1px solid rgba(255,215,138,.65);border-radius:7px;background:linear-gradient(135deg,#e06188,#8f316c 60%,#50234f);box-shadow:0 8px 14px rgba(0,0,0,.38);transform-origin:12px 25px;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.gift-ribbon-horizontal{position:absolute;left:0;right:0;top:10px;height:7px;background:linear-gradient(90deg,#ffd78a,#fff0ad,#e9a64d)}
+.gift-ribbon-vertical{position:absolute;z-index:1;left:59px;top:0;width:22px;height:100%;background:linear-gradient(90deg,#e7a34c,#fff0ad,#d98b3f);opacity:.9}
+.gift-front-shine{position:absolute;z-index:2;left:12px;top:12px;width:45px;height:55px;border-radius:50%;background:rgba(255,255,255,.13);filter:blur(10px);transform:rotate(30deg)}
+.gift-bow{position:absolute;z-index:3;top:-16px;width:30px;height:22px;border:5px solid #ffd78a;border-radius:70% 15% 70% 15%;background:#ffb85f;box-shadow:0 0 12px rgba(255,215,138,.4)}
+.bow-left{left:64px;transform:rotate(28deg)}
+.bow-right{left:87px;transform:scaleX(-1) rotate(28deg)}
+.gift-message{position:absolute;z-index:4;left:50%;bottom:108px;width:230px;transform:translate(-50%,18px) scale(.8);opacity:0;color:#fff0c5;pointer-events:none;transition:.6s ease}
+.gift-message strong{display:block;font:1.5rem "Cormorant Garamond",serif;color:#fff7ed}
+.gift-message span{display:block;margin-top:4px;color:#ffd0e5;font-size:.7rem}
+.gift-open-btn{border:1px solid rgba(255,215,138,.5);border-radius:999px;padding:10px 17px;background:rgba(255,215,138,.08);color:#ffe7b0;cursor:pointer;transition:.35s ease}
+.gift-open-btn:hover{transform:translateY(-3px);background:rgba(255,215,138,.16);box-shadow:0 12px 30px rgba(255,215,138,.14)}
+.gift-open-btn span{margin-left:8px;color:var(--pink)}
+.gift-model.open .gift-lid{transform:translate(-8px,-45px) rotate(-18deg)}
+.gift-model.open .gift-message{transform:translate(-50%,-32px) scale(1);opacity:1}
+.gift-model.open .gift-aura{background:rgba(255,215,138,.32);animation:giftAura 1.2s ease-in-out infinite alternate}
 .gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
 .gift-module{
   position:relative;min-height:330px;padding:29px 25px 24px;
