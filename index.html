@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#120b22">
+  <title>08 • 09 — Two Hearts, One Date</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="stars"></div>
+  <div id="hearts"></div>
+  <canvas id="fireworks"></canvas>
+  <div id="fireworkNames" aria-hidden="true"></div>
+
+  <!-- INTRO -->
+  <section id="intro" class="screen active">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="intro-content">
+      <p class="eyebrow">A little surprise, made with love</p>
+      <div class="date-badge">08 <span>•</span> 09</div>
+      <h1>Two Hearts<br><em>One Beautiful Date</em></h1>
+      <p class="intro-text">There is a story hidden inside this date.<br>Tap below to discover it.</p>
+      <button id="beginBtn" class="magic-btn">
+        <span class="btn-shine"></span>
+        <span>Open the Surprise</span>
+        <b>✦</b>
+      </button>
+      <div class="scroll-hint">made especially for two beautiful souls ↓</div>
+    </div>
+  </section>
+
+  <!-- REVEAL -->
+  <section id="reveal" class="screen">
+    <div class="reveal-inner">
+      <div class="small-line">Sometimes a date is more than a date...</div>
+      <h2>It becomes a <span>memory.</span></h2>
+      <div class="timeline-reveal">
+        <div class="year-card">
+          <span class="year">1998</span>
+          <span class="tiny">08 September</span>
+          <strong>A beautiful soul was born.</strong>
+        </div>
+        <div class="connector">✦</div>
+        <div class="year-card">
+          <span class="year">2023</span>
+          <span class="tiny">08 September</span>
+          <strong>A little star joined the world.</strong>
+        </div>
+      </div>
+      <button class="next-btn" data-next="story">Continue the story <span>→</span></button>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" class="screen section-dark">
+    <div class="section-heading">
+      <p class="eyebrow">The coincidence that makes it magical</p>
+      <h2>One Date.<br><em>Two Birthdays.</em></h2>
+      <p>Years apart, yet the same beautiful day chose them both.</p>
+    </div>
+
+    <div class="birthday-cards">
+      <article class="birthday-card mother-card">
+        <div class="card-glow"></div>
+        <div class="photo-wrap">
+          <img src="images/mother-daughter-01.jpg" alt="Mother and daughter">
+        </div>
+        <div class="card-content">
+          <span class="role">MOTHER</span>
+          <h3>08 September 1998</h3>
+          <p>The beginning of a beautiful journey.</p>
+        </div>
+      </article>
+
+      <div class="heart-divider">
+        <span>08</span>
+        <i>♥</i>
+        <span>09</span>
+      </div>
+
+      <article class="birthday-card daughter-card">
+        <div class="card-glow"></div>
+        <div class="photo-wrap">
+          <img src="images/mother-daughter-02.jpg" alt="Mother and daughter">
+        </div>
+        <div class="card-content">
+          <span class="role">DAUGHTER</span>
+          <h3>08 September 2023</h3>
+          <p>A tiny heart made the date even more special.</p>
+        </div>
+      </article>
+    </div>
+
+    <button class="next-btn" data-next="memories">Our memories <span>→</span></button>
+  </section>
+
+  <!-- MEMORIES -->
+  <section id="memories" class="screen">
+    <div class="section-heading">
+      <p class="eyebrow">A little gallery of love</p>
+      <h2>Magic <em>Collections</em></h2>
+      <p>Memories, celebration, and a little starlight for the two hearts at the center of this story.</p>
+    </div>
+
+    <div class="gallery-tools" aria-label="Gallery collections">
+      <div class="collection-tabs">
+        <button class="collection-tab active" data-filter="all">All magic</button>
+        <button class="collection-tab" data-filter="memories">Memories</button>
+        <button class="collection-tab" data-filter="celebration">Celebration</button>
+        <button class="collection-tab" data-filter="starlight">Starlight</button>
+      </div>
+      <button id="shuffleGallery" class="shuffle-btn" title="Shuffle magic collection">✧ <span>Shuffle</span></button>
+    </div>
+
+    <div id="gallery" class="gallery">
+      <!-- Filled by JavaScript -->
+    </div>
+
+    <div class="gallery-actions">
+      <button id="openGallery" class="outline-btn">View memories full screen ✦</button>
+      <button class="next-btn" data-next="letter">A message for you <span>→</span></button>
+    </div>
+  </section>
+
+  <!-- LETTER -->
+  <section id="letter" class="screen section-dark">
+    <div class="letter-stage">
+      <div class="envelope-shadow"></div>
+      <div class="letter-card">
+        <div class="wax">♥</div>
+        <p class="letter-top">A small message from the heart</p>
+        <h2>To two very special souls,</h2>
+        <p>
+          Some birthdays are celebrated once a year.
+          But some dates become precious because they carry
+          more than one beautiful story.
+        </p>
+        <p>
+          <strong>08 September</strong> is one of those magical dates.
+          It gave the world a wonderful woman in 1998,
+          and years later, it welcomed a little girl who made
+          the same date even brighter.
+        </p>
+        <p>
+          May both of you always have reasons to smile,
+          may your bond grow stronger with every passing year,
+          and may every 08 September bring a new reason to celebrate.
+        </p>
+        <p class="signature">With lots of love ♥</p>
+        <button id="celebrateBtn" class="magic-btn">
+          <span class="btn-shine"></span>
+          <span>Start the Celebration</span>
+          <b>🎉</b>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINALE -->
+  <section id="finale" class="screen finale">
+    <div class="finale-content">
+      <div class="crown">✦ ✦ ✦</div>
+      <p class="eyebrow">A date worth remembering forever</p>
+      <div class="giant-date">08 <span>•</span> 09</div>
+      <h1>Happy Birthday</h1>
+      <h2 class="final-names">Jabeen <span>&amp;</span> Amira</h2>
+      <p class="final-roles">Mom <span>♥</span> Daughter</p>
+      <p class="final-message">
+        Two birthdays.<br>
+        Two journeys.<br>
+        One unforgettable date.
+      </p>
+      <div class="final-photo">
+        <img src="images/mother-daughter-01.jpg" alt="Beautiful mother and daughter memory">
+        <div class="photo-ring"></div>
+      </div>
+      <button id="cakeBtn" class="cake-btn"><span>✦</span> Cut the birthday cake <span>✦</span></button>
+      <button id="giftBtn" class="gift-btn"><span>✦</span> Open the birthday gift <span>✦</span></button>
+      <button id="replayBtn" class="outline-btn">Replay the surprise ↻</button>
+    </div>
+  </section>
+
+  <!-- CAKE CUTTING -->
+  <section id="cake" class="screen cake-screen">
+    <div class="cake-stage">
+      <p class="eyebrow">The sweetest part of the celebration</p>
+      <h2>Make a wish,<br><em>Jabeen &amp; Amira</em></h2>
+      <p class="cake-intro">One cake, two wishes, and a whole sky full of reasons to celebrate.</p>
+      <div class="cake-plate">
+        <div class="cake-stand"></div>
+        <div class="cake-body"><div class="cake-icing"></div><div class="cake-sprinkles">✦ · ✧ · ✦ · ✧ · ✦</div></div>
+        <div class="cake-candle candle-one"><i></i></div>
+        <div class="cake-candle candle-two"><i></i></div>
+        <div class="cake-candle candle-three"><i></i></div>
+        <div class="cake-knife">╱</div>
+      </div>
+      <button id="cutCakeBtn" class="magic-btn"><span class="btn-shine"></span><span>Cut the cake</span><b>🍰</b></button>
+      <div id="cakeReveal" class="cake-reveal" aria-live="polite">
+        <h3>Sweet wishes sent into the sky!</h3>
+        <p>May Jabeen and Amira have a year filled with laughter, love, and beautiful surprises.</p>
+        <div class="cake-actions">
+          <button id="wishAfterCake" class="module-btn">Send one more wish <span>✧</span></button>
+          <button class="gift-btn" data-next="gift-vault"><span>✦</span> Open the Gift Vault <span>✦</span></button>
+          <button class="next-btn" data-next="finale">See the fireworks again <span>→</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIFT VAULT -->
+  <section id="gift-vault" class="screen gift-screen">
+    <div class="gift-shell">
+      <div class="gift-heading">
+        <p class="eyebrow">A little more magic, kept just for you</p>
+        <h2>The Birthday <em>Gift Vault</em></h2>
+        <p>Three tiny gifts for a date that deserves more than one celebration.</p>
+      </div>
+
+      <div class="gift-grid">
+        <article class="gift-module wish-module">
+          <span class="module-number">01</span>
+          <div class="module-icon">✧</div>
+          <h3>A wish from the stars</h3>
+          <p id="wishText">Tap the button and let the universe choose a wish for this year.</p>
+          <button id="wishBtn" class="module-btn">Reveal a wish <span>↗</span></button>
+        </article>
+
+        <article class="gift-module note-module">
+          <span class="module-number">02</span>
+          <div class="module-icon">♡</div>
+          <h3>Leave a keepsake</h3>
+          <p>A note for the two of you, saved privately on this device.</p>
+          <textarea id="keepsakeInput" maxlength="180" placeholder="Write a little birthday memory..."></textarea>
+          <div class="note-footer"><span id="noteStatus">Your note stays here.</span><button id="saveNoteBtn" class="module-btn">Save note <span>♥</span></button></div>
+        </article>
+
+        <article class="gift-module toast-module">
+          <span class="module-number">03</span>
+          <div class="module-icon">☼</div>
+          <h3>Raise a toast</h3>
+          <p>For every laugh, every milestone, and every September still to come.</p>
+          <button id="toastBtn" class="toast-glass">Cheers to you <span>🥂</span></button>
+          <div id="toastMessage" class="toast-message">Click when you are ready to celebrate.</div>
+        </article>
+      </div>
+
+      <button class="next-btn gift-back" data-next="magic-video">Watch the magic <span>→</span></button>
+    </div>
+  </section>
+
+  <!-- MAGIC VIDEO -->
+  <section id="magic-video" class="screen magic-video-screen section-dark">
+    <div class="magic-video-stage">
+      <div class="video-copy">
+        <p class="eyebrow">A little moving memory</p>
+        <h2>Let the moment<br><em>come alive.</em></h2>
+        <p>One more surprise, made especially for Jabeen and Amira.</p>
+      </div>
+      <div class="video-frame">
+        <video id="magicVideo" autoplay muted playsinline preload="auto" poster="images/mother-daughter-01.jpg">
+          <source src="videos/magical-birthday.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+        <div class="video-shine"></div>
+      </div>
+      <div class="video-frame">
+        <video id="magicVideoTwo" muted playsinline preload="auto" poster="images/mother-daughter-02.jpg">
+          <source src="videos/magical-birthday-2.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+        <div class="video-shine"></div>
+      </div>
+      <p class="video-fallback" id="videoFallback">Add your videos at <strong>videos/magical-birthday.mp4</strong> and <strong>videos/magical-birthday-2.mp4</strong> to play both surprises.</p>
+      <button class="next-btn" data-next="finale">Continue to the celebration <span>→</span></button>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox">
+    <button id="closeLightbox" class="close-lightbox">×</button>
+    <button id="prevPhoto" class="photo-nav left">‹</button>
+    <img id="lightboxImg" src="" alt="Memory">
+    <button id="nextPhoto" class="photo-nav right">›</button>
+    <div id="photoCounter"></div>
+  </div>
+
+  <!-- OPTIONAL MUSIC:
+       Put your MP3 at music/birthday.mp3 to enable it.
+       The JS will safely ignore it if it doesn't exist. -->
+  <audio id="birthdayMusic" autoplay loop preload="auto">
+    <source src="music/birthday.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicBtn" class="music-btn" title="Play/Pause music">♫</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
